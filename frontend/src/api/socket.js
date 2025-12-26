@@ -5,7 +5,6 @@ const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "https://safestream-qj0v.o
 const socket = io(SOCKET_URL, {
     autoConnect: false,
     transports: ["websocket", "polling"],
-    withCredentials: true,
     auth: {
         token: localStorage.getItem("token")
     }
