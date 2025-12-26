@@ -14,7 +14,8 @@ export default function VideoPlayer({ videoId, onClose, title }) {
         setIsWaiting(true);
         setError(false);
 
-        const streamUrl = `http://localhost:5000/api/videos/${videoId}/stream?token=${token}`;
+        const API_BASE = import.meta.env.VITE_API_BASE || "https://safestream-qj0v.onrender.com";
+        const streamUrl = `${API_BASE}/api/videos/${videoId}/stream?token=${token}`;
 
         if (videoRef.current) {
             videoRef.current.src = streamUrl;

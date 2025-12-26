@@ -17,7 +17,8 @@ export default function VideoCard({ video, role, onPlay, onFlag, onUnflag, onEdi
 
     // Construct the stream URL for the thumbnail
     // Adding #t=0.1 tells the browser to load the frame at 0.1 seconds
-    const thumbUrl = `http://localhost:5000/api/videos/${video._id}/stream?token=${localStorage.getItem("token")}#t=0.1`;
+    const API_BASE = import.meta.env.VITE_API_BASE || "https://safestream-qj0v.onrender.com";
+    const thumbUrl = `${API_BASE}/api/videos/${video._id}/stream?token=${localStorage.getItem("token")}#t=0.1`;
 
     return (
         <div className="group relative bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-neutral-600 hover:shadow-2xl flex flex-col h-full">

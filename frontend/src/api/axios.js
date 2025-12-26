@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const API_BASE = import.meta.env.VITE_API_BASE || "https://safestream-qj0v.onrender.com";
+
 const api = axios.create({
-    baseURL: "http://localhost:5000/api"
+    baseURL: `${API_BASE}/api`
 });
 
 api.interceptors.request.use((config) => {
