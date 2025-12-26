@@ -15,7 +15,7 @@ const {
 const { streamVideo } = require("./video.stream");
 
 const storage = multer.diskStorage({
-    destination: "uploads/",
+    destination: "/tmp/uploads/",
     filename: (req, file, cb) => {
         cb(null, Date.now() + "-" + file.originalname);
     }
