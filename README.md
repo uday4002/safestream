@@ -9,9 +9,8 @@ The application is designed to demonstrate **system design, scalability, real-ti
 
 ## 🚀 Live Demo
 
-- **Frontend**: https://safestream.vercel.app  
-- **Backend API**: https://safestream-backend.onrender.com
-
+- **Frontend**: https://safestream-xi.vercel.app
+  
 ---
 
 ## 🧠 Problem Statement
